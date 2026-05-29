@@ -16,7 +16,15 @@ public class QuestService {
     }
 
     public List<Quest> getAllActive() {
-        return questRepository.findByFeaturedTrue();
+
+        List<Quest> quests =
+                questRepository.findByFeaturedTrue();
+
+        System.out.println(
+                "QUEST COUNT = " + quests.size()
+        );
+
+        return quests;
     }
 
     public Quest getById(Long id) {
