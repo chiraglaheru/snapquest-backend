@@ -17,12 +17,12 @@ public class QuestService {
 
     public List<Quest> getAllActive() {
 
+        System.out.println("TOTAL QUESTS = " + questRepository.count());
+
         List<Quest> quests =
                 questRepository.findByFeaturedTrue();
 
-        System.out.println(
-                "QUEST COUNT = " + quests.size()
-        );
+        System.out.println("FEATURED QUESTS = " + quests.size());
 
         return quests;
     }
