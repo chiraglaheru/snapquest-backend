@@ -40,4 +40,5 @@ public class QuestService {
         quest.setPoints(points);
         return questRepository.save(quest);
     }
+
 }

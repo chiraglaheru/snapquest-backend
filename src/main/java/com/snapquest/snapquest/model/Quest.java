@@ -114,6 +114,7 @@ public class Quest {
 
     @Column(nullable = false)
     private Boolean flashQuest = false;
+
     private LocalDateTime expiresAt;
 
     public Boolean getFeatured() {
@@ -126,4 +127,34 @@ public class Quest {
 
     @Column(nullable = false)
     private Boolean featured = false;
+
+    public Quest() {
+    }
+
+    public Quest(String title,
+                 String description,
+                 Integer points,
+                 Boolean featured) {
+
+        this.title = title;
+        this.description = description;
+        this.challenge = title;
+        this.points = points;
+        this.featured = featured;
+    }
+
+    public Quest(String title,
+                 String description,
+                 String challenge,
+                 Integer points,
+                 Boolean featured) {
+
+        this.title = title;
+        this.description = description;
+        this.challenge = challenge;
+        this.points = points;
+        this.featured = featured;
+    }
+
+
 }
